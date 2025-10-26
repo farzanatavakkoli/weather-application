@@ -1,3 +1,92 @@
+:root {
+  --bg-gradient-light: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  --bg-gradient-dark: linear-gradient(135deg, #141e30, #243b55);
+  --card-bg-light: rgba(255, 255, 255, 0.6);
+  --card-bg-dark: rgba(0, 0, 0, 0.4);
+  --text-light: #222;
+  --text-dark: #fff;
+  --accent: #6c63ff;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.5);
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background: var(--bg-gradient-light);
+  color: var(--text-light);
+  transition: background 0.5s ease, color 0.5s ease;
+}
+header {
+  border-bottom: 1px solid #b4d9fc;
+  padding: 0 0 30px 0;
+}
+.weather-app {
+  background: var(--card-bg-light);
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px var(--shadow-light);
+  transition: background 0.5s ease, box-shadow 0.5s ease;
+  backdrop-filter: blur(15px);
+}
+header form {
+  display: flex;
+  justify-content: center;
+}
+.search-input {
+  width: 80%;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.8);
+}
+.search-button {
+  width: 20%;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  margin-left: 3px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.weather-app-today {
+  display: flex;
+  justify-content: space-between;
+}
+main {
+  padding: 30px 0;
+}
+.city {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 48px;
+  margin: 0;
+}
+.weather-app-today strong {
+  color: #f65282;
+}
+.current-temperature {
+  display: flex;
+}
+.current-temperature-icon {
+  font-size: 48px;
+  margin-top: 28px;
+}
+.current-temperature-value {
+  font-size: 88px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.current-temperature-unit {
+  margin-top: 18px;
+  font-size: 28px;
+}
 footer {
   text-align: center;
+  font-size: 13px;
 }

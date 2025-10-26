@@ -6,37 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>weather</title>
     <link rel="stylesheet" href="src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <form>
-            <input type="text" placeholder="Enter a city..." required>
-            <input type="submit" value="Search">
-        </form>
-    </header>
-    <main>
-        <div>
-            <h1>
-                Kabul
-            </h1>
-            <p>
-                Sunday, 12:14 PM, Slightly cloudy
-                <br>
-                Humidity: 86%, Wind: 6.17km/h
-            </p>
-        </div>
-        <div>
-            ⛅ 14℃
-        </div>
-    </main>
+    <div class="weather-app">
+        <header>
+            <form>
+                <input type="text" placeholder="Enter a city..." required class="search-input">
+                <input type="submit" value="Search" class="search-button">
+            </form>
+        </header>
+        <main>
+            <div class="weather-app-today">
+                <div>
+                    <h1 class="city">
+                        Kabul
+                    </h1>
+                    <p>
+                        Sunday, 12:14 PM, Slightly cloudy
+                        <br>
+                        Humidity: <strong>86%</strong>, Wind: <strong>6.17km/h</strong>
+                    </p>
+                </div>
+                <div class="current-temperature">
+                    <div class="current-temperature-icon">⛅</div>
+                    <div class="current-temperature-value">14</div>
+                    <div class="current-temperature-unit">℃</div>
+                </div>
+            </div>
+        </main>
 
 
-    <footer>
-        This project was coded by <a href="https://github.com/farzanatavakkoli" target="_blank">Farzana Tavakkoli</a>,
-        is <a href="https://github.com/farzanatavakkoli/weather-application" target="_blank">opened-sourch on gitHub</a>
-        and <a href="https://oggimeteo.netlify.app/" target="_blank">hosted on netlify.</a>
-    </footer>
+        <footer>
+            This project was coded by <a href="https://github.com/farzanatavakkoli" target="_blank">Farzana
+                Tavakkoli</a>,
+            is <a href="https://github.com/farzanatavakkoli/weather-application" target="_blank">open-sourced on
+                gitHub</a>
+            and <a href="https://oggimeteo.netlify.app/" target="_blank">hosted on netlify.</a>
+        </footer>
+    </div>
     <script src="javascript/index.js"></script>
 </body>
 
