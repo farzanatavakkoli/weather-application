@@ -1,20 +1,20 @@
 function updateCurrentWeather(response) {
   let currentTemp = document.querySelector("#current-temperature-value");
-  currentTemp.innerHTML = Math.round(response.data.temperature.current);
   let descriptionElement = document.querySelector("#description");
   let city = document.querySelector("#city");
-  city.innerHTML = response.data.city;
-  descriptionElement.innerHTML = response.data.condition.description;
-
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-
   let windElement = document.querySelector("#wind");
-  windElement.innerHTML = `${response.data.wind.speed}km/h`;
-
   let timeElement = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
+
+  currentTemp.innerHTML = Math.round(response.data.temperature.current);
+  city.innerHTML = response.data.city;
+  descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  windElement.innerHTML = `${response.data.wind.speed}km/h`;
   timeElement.innerHTML = formatDate(date);
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" alt=""class="current-temperature-icon">`;
 }
 
 function formatDate(date) {
