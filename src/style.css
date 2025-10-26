@@ -43,7 +43,7 @@ header form {
   border: none;
   padding: 15px 20px;
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.8);
+  background: #f9f7fe;
 }
 .search-button {
   width: 20%;
